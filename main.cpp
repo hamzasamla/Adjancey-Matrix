@@ -16,5 +16,9 @@ int main()
 //	M.addEdge(2,1);
 	system("cls");
 	M.display();
+	
+	int m=M.findDegree();
+	cout<<"Degree of Vertice is: "<<m<<endl;
+	M.path();
 	system("pause");
 }

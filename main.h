@@ -62,5 +62,42 @@ class Matrix
 				cout<<endl;
 			}
 		}
+		
+		int findDegree()
+		{
+			cout<<"\nFinding Degree\n";
+			int v;
+			cout<<"Enter vertex to find? ";
+			cin>>v;
+			int degree=0;
+			for(int i=0;i<this->vertices;i++)
+			{
+				if(this->adj[v][i]==1)
+				{
+					degree++;
+				}
+			}
+			return degree;
+		}
+		
+		void path()
+		{
+			int s,d;
+			cout<<"Finding Path Exist or Not"<<endl;
+			
+			cout<<"Enter src: ";
+			cin>>s;
+			cout<<"Enter Dest: ";
+			cin>>d;
+			if(this->adj[s][d]==1 || this->adj[d][s]==1)
+			{
+				cout<<"Path Exists"<<endl;
+				
+			}
+			else
+			{
+				cout<<"Path doesn't exists"<<endl;
+			}
+		}
 	
 };
